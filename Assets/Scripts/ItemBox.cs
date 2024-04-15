@@ -41,6 +41,9 @@ public class ItemBox : MonoBehaviour
             slot.HideBGPanel();
 
         }
+
+        selectedSlot = null;
+
         // 選択されたスロットの選択パネルを表示
         if(slots[position].Onselected())
         {
@@ -67,5 +70,14 @@ public class ItemBox : MonoBehaviour
 
     }
 
+
+    public Item GetSelectedItem()
+    {
+        if(selectedSlot == null)
+        {
+            return null;
+        }
+        return selectedSlot.GetItem();
+    }
 
 }

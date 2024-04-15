@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
 
-[Serializable]
-public class Item
+[Serializable]public class Item
 {
     public enum Type
     {
@@ -10,13 +9,15 @@ public class Item
         Ball,
     }
 
-    public Type type;       // 種類
-    public Sprite sprite;   // slotに表示する画像
+    public Type type;           // 種類
+    public Sprite sprite;       // slotに表示する画像
+    public GameObject zoomObj;  //  
 
-    public Item(Type type, Sprite sprite)
+    public Item(Type type, Sprite sprite, GameObject zoomObj)
     {
         this.type = type;
         this.sprite = sprite;
+        this.zoomObj = zoomObj;
     }
 
 }
