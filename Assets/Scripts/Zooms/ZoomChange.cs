@@ -8,9 +8,12 @@ public class ZoomChange : MonoBehaviour
     [SerializeField] Transform objParent = default;
     GameObject zoomObj;
 
+    private void Start()
+    {
+        zoomCanvas.SetActive(false);
+    }
+
     // アイテムを選択していたら
-
-
     // zoomボタンを押したらZoomCanvasが表示される。
     public void OnClickZoomButton()
     {

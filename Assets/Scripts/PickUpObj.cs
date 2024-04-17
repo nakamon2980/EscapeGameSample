@@ -18,6 +18,7 @@ public class PickUpObj : MonoBehaviour
     {
         ItemBox.instance.SetItem(item);
         gameObject.SetActive(false);
+        Debug.Log("アイテムをピックアップ！");
     }
 
 
